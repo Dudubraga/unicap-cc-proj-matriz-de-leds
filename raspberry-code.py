@@ -554,6 +554,6 @@ while True:
         # Segunda Combinação --> 2, 6, 10, 14, 18, 22
         sequence2(); sequence6(); sequence10(); sequence14(); sequence18(); sequence22();
         
-    if gpio.input(14) == True and gpio.input(15) == True: # Ambos os botões 1 e 2
+    if gpio.input(14) == True and gpio.input(15) == True: # Ambos os botões
         # Terceira Combinação --> 3, 7, 11, 15, 19, 23
         sequence3(); sequence7(); sequence11(); sequence15(); sequence19(); sequence23();
