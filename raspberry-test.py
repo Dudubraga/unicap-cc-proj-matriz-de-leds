@@ -1,6 +1,6 @@
 import RPi.GPIO as gpio
 import time
-  # Declarando cada Led
+  # Declarando cada LED
 led1 = 2
 led2 = 3
 led3 = 4
@@ -10,7 +10,7 @@ led6 = 22
 led7 = 10
 led8 = 9
 led9 = 11
-  # Set output para cada Led
+  # Definindo as funções de ON & OFF para os LEDs
 gpio.setmode(gpio.BCM)
 def ON(led):
     gpio.setup(led,gpio.OUT)
@@ -18,11 +18,11 @@ def ON(led):
 def OFF(led):
     gpio.setup(led,gpio.OUT)
     gpio.output(led,gpio.LOW)
-  # Set botões 1 e 2
+  # Definindo os pinos dos botões 1 & 2 
 gpio.setup(14, gpio.IN, pull_up_down=gpio.PUD_DOWN)
 gpio.setup(15, gpio.IN, pull_up_down=gpio.PUD_DOWN)
-  # Sequências
-def sequence2(): # Definindo a sequência 2
+  # Definindo as Sequências
+def sequence2(): # Sequência 2
     ON(led7)
     time.sleep(1)
     OFF(led7)
@@ -51,7 +51,7 @@ def sequence2(): # Definindo a sequência 2
     time.sleep(1)
     OFF(led3)
     time.sleep(1)
-def sequence3(): # Definindo a sequência 3
+def sequence3(): # Sequência 3
     ON(led3)
     time.sleep(1)
     OFF(led3)
@@ -80,7 +80,7 @@ def sequence3(): # Definindo a sequência 3
     time.sleep(1)
     OFF(led7)
     time.sleep(1)
-def sequence4(): # Definindo a sequência 4
+def sequence4(): # Sequência 4
     ON(led9)
     time.sleep(1)
     OFF(led9)
@@ -109,7 +109,7 @@ def sequence4(): # Definindo a sequência 4
     time.sleep(1)
     OFF(led1)
     time.sleep(1)
-def sequence6(): # Definindo a sequência 6
+def sequence6(): # Sequência 6
     ON(led1)
     ON(led3)
     ON(led7)
@@ -156,7 +156,7 @@ def sequence6(): # Definindo a sequência 6
     time.sleep(1)
     OFF(led5)
     time.sleep(1)
-def sequence7(): # Definindo a sequência 7
+def sequence7(): # Sequência 7
     ON(led7)
     time.sleep(1)
     ON(led4)
@@ -181,7 +181,7 @@ def sequence7(): # Definindo a sequência 7
     OFF(led6)
     OFF(led3)
     time.sleep(1)
-def sequence8(): # Definindo a sequência 8
+def sequence8(): # Sequência 8
     ON(led7)
     ON(led4)
     ON(led8)
@@ -206,7 +206,7 @@ def sequence8(): # Definindo a sequência 8
     time.sleep(1)
     OFF(led3)
     time.sleep(1)
-def sequence10(): # Definindo a sequência 10
+def sequence10(): # Sequência 10
     ON(led1)
     ON(led2)
     ON(led3)
@@ -231,7 +231,7 @@ def sequence10(): # Definindo a sequência 10
     time.sleep(1)
     OFF(led9)
     time.sleep(1)
-def sequence11(): # Definindo a sequência 11
+def sequence11(): # Sequência 11
     ON(led3)
     time.sleep(1)
     ON(led2)
@@ -256,7 +256,7 @@ def sequence11(): # Definindo a sequência 11
     OFF(led8)
     OFF(led7)
     time.sleep(1)
-def sequence12(): # Definindo a sequência 12
+def sequence12(): # Sequência 12
     ON(led7)
     ON(led4)
     ON(led8)
@@ -281,7 +281,7 @@ def sequence12(): # Definindo a sequência 12
     time.sleep(1)
     OFF(led7)
     time.sleep(1)
-def sequence14(): # Definindo a sequência 14
+def sequence14(): # Sequência 14
     ON(led7)
     ON(led4)
     ON(led8)
@@ -306,7 +306,7 @@ def sequence14(): # Definindo a sequência 14
     time.sleep(1)
     OFF(led1)
     time.sleep(1)
-def sequence15(): # Definindo a sequência 15
+def sequence15(): # Sequência 15
     ON(led1)
     ON(led2)
     time.sleep(1)
@@ -331,7 +331,7 @@ def sequence15(): # Definindo a sequência 15
     OFF(led4)
     OFF(led5)
     time.sleep(1)
-def sequence18(): # Definindo a sequência 18
+def sequence18(): # Sequência 18
     ON(led3)
     ON(led7)
     time.sleep(1)
@@ -356,7 +356,7 @@ def sequence18(): # Definindo a sequência 18
     OFF(led5)
     OFF(led9)
     time.sleep(1)
-def sequence19(): # Definindo a sequência 19
+def sequence19(): # Sequência 19
     ON(led5)
     time.sleep(1)
     ON(led1)
@@ -391,7 +391,7 @@ def sequence19(): # Definindo a sequência 19
     time.sleep(1)
     OFF(led5)
     time.sleep(1)
-def sequence20(): # Definindo a sequência 20
+def sequence20(): # Sequência 20
     ON(led7)
     ON(led4)
     ON(led8)
@@ -441,7 +441,7 @@ def sequence20(): # Definindo a sequência 20
     OFF(led6)
     OFF(led3)
     time.sleep(1)
-def sequence22(): # Definindo a sequência 22
+def sequence22(): # Sequência 22
     ON(led7)
     ON(led4)
     ON(led8)
@@ -491,7 +491,7 @@ def sequence22(): # Definindo a sequência 22
     OFF(led6)
     OFF(led3)
     time.sleep(1)
-def sequence23(): # Definindo a sequência 23
+def sequence23(): # Sequência 23
     ON(led1)
     ON(led5)
     ON(led9)
@@ -516,7 +516,7 @@ def sequence23(): # Definindo a sequência 23
     OFF(led3)
     OFF(led7)
     time.sleep(1)
-def sequence24(): # Definindo a sequência 24
+def sequence24(): # Sequência 24
     ON(led3)
     ON(led5)
     ON(led7)
@@ -541,7 +541,7 @@ def sequence24(): # Definindo a sequência 24
     OFF(led1)
     OFF(led9)
     time.sleep(1)
-  # Comando dos Botões
+  # Comando para os botões ligarem as sqências de LEDs
 while True:
     if gpio.input(14) == gpio.HIGH and gpio.input(15) == gpio.LOW: # Apenas o botão 1
         # Primeira Combinação --> 4, 8, 12, 20, 24
@@ -551,6 +551,6 @@ while True:
         # Segunda Combinação --> 2, 6, 10, 14, 18, 22
         sequence2(); sequence6(); sequence10(); sequence14(); sequence18(); sequence22()
         
-    if gpio.input(14) == gpio.HIGH and gpio.input(15) == gpio.HIGH: # Ambos os botões 1 e 2
+    if gpio.input(14) == gpio.HIGH and gpio.input(15) == gpio.HIGH: # Ambos os botões
         # Terceira Combinação --> 3, 7, 11, 15, 19, 23
         sequence3(); sequence7(); sequence11(); sequence15(); sequence19(); sequence23()
