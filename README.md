@@ -1,4 +1,4 @@
-# 🏆 Matriz de LEDs
+# 🚀 Matriz de LEDs
 > Projeto da disciplina de Fundamentos de Hardware
 
 ## 📖 Visão Geral
